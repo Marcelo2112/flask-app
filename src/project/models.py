@@ -34,10 +34,10 @@ class Proveedor (db.Model):
 class Insumo (db.Model):
     id_insumo = db.Column(db.Integer, primary_key=True, autoincrement=True)
     nombre_insumo = db.Column(db.String, nullable=False)
-    codigo_insumo = db.Column(db.Intenger, nuallable=False)
-    cantidad_insumo = db.Column(db.Intenger, nuallable=False)
-    color_insumo = db.Column(db.String, nuallable=True)
-    medidas_insumo = db.Column(db.String, nuallable=True)
-    marca_insumo = db.Column(db.String, nuallable=True)
+    codigo_insumo = db.Column(db.Integer, nullable=False)
+    cantidad_insumo = db.Column(db.Integer, nullable=False)
+    color_insumo = db.Column(db.String, nullable=True)
+    medidas_insumo = db.Column(db.String, nullable=True)
+    marca_insumo = db.Column(db.String, nullable=True)
 
 

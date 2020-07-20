@@ -141,13 +141,3 @@ def usuario(payload):
     return usuario_schema.dump(usuario),200
 
 
-@blueprint.route('/registerinsumo', methods=['POST'])
-@autenticar
-def register2 (payload):
-    
-    proveedor = proveedor_schema.load(request.json)
-
-    db.session.add(proveedor)
-    db.session.commit()   
-
-    return proveedor_schema.dump(proveedor), 201

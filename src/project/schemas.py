@@ -8,10 +8,6 @@ class UsuarioSchema(ma.SQLAlchemyAutoSchema):
         load_instance = True  ##vi direccionalmente##
         load_only= ('password', )
 
-#class EmpresaSchema(ma.SQLAlchemyAutoSchema):
- #   class Meta:
-  #      model = Empresa 
-
 class ProveedorSchema(ma.SQLAlchemyAutoSchema):
   class Meta:
     model = Proveedor
@@ -19,4 +15,3 @@ class ProveedorSchema(ma.SQLAlchemyAutoSchema):
 
 usuario_schema = UsuarioSchema()
 proveedor_schema = ProveedorSchema()
-#empresa_schema = EmpresaSchema()
