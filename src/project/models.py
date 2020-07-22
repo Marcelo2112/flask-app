@@ -26,10 +26,11 @@ class Proveedor (db.Model):
 
     id_proveedor = db.Column(db.Integer, primary_key=True, autoincrement=True)
     nombre_empresa = db.Column(db.String, nullable=False)
-    rut_empresa = db.Column(db.String, nullable=False)
+    rut_empresa = db.Column(db.Integer, nullable=False)
     nombre_proveedor = db.Column(db.String, nullable=False)
     apellido_proveedor = db.Column(db.String, nullable=False)
     telefono_proveedor = db.Column(db.Integer, nullable=True)
+    usuario_id = db.Column(db.Integer, nullable=False)
 
 class Insumo (db.Model):
     id_insumo = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -39,5 +40,7 @@ class Insumo (db.Model):
     color_insumo = db.Column(db.String, nullable=True)
     medidas_insumo = db.Column(db.String, nullable=True)
     marca_insumo = db.Column(db.String, nullable=True)
+ 
+
 
 

@@ -125,7 +125,7 @@ def login():
         return 'Not Found', 404
 
     payload = {
-        'sub': usuario.id,  #identifica al sujeto#
+        'sub': usuario.id,  #identifica al sujeto IDIDIDIDID#
         'name': usuario.nombre,
         'iat': datetime.datetime.now()   #gt 0   4 horas mas tardes  compramos con el server   #
     }

@@ -20,8 +20,12 @@ def list(usuario):
 @blueprint.route('/registerinsumo', methods=['POST'])
 @autenticar
 def regis(usuario):
+    prueba = request.json
+    prueba ['usuario_id'] = usuario['sub']
 
-    proveedor = proveedor_schema.load(request.json)
+
+
+    proveedor = proveedor_schema.load(prueba)
 
     db.session.add(proveedor)
     db.session.commit()
