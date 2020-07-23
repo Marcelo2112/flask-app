@@ -18,12 +18,14 @@ def register_blueprints(app):
     from project.endpoints.users import blueprint as usuarios
     from project.endpoints.proveedor import blueprint as proveedor
     from project.endpoints.insumo import blueprint as insumo
+    from project.endpoints.producto import blueprint as producto
     from project.endpoints.status import blueprint as status
 
     app.register_blueprint(usuarios)
     app.register_blueprint(status)
     app.register_blueprint(proveedor)
     app.register_blueprint(insumo)
+    app.register_blueprint(producto)
     
 def register_error_handler(app):
     @app.errorhandler(marshmallow.exceptions.ValidationError)

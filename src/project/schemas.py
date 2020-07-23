@@ -1,5 +1,5 @@
 from project import ma
-from project.models import Usuario, Proveedor, Insumo
+from project.models import Usuario, Proveedor, Insumo, Producto
 
 
 class UsuarioSchema(ma.SQLAlchemyAutoSchema):
@@ -18,6 +18,12 @@ class InsumoSchema(ma.SQLAlchemyAutoSchema):
     model = Insumo
     load_instance = True
 
+class ProductoSchema(ma.SQLAlchemyAutoSchema):
+  class Meta:
+    model = Producto
+    load_instance = True
+
 usuario_schema = UsuarioSchema()
 proveedor_schema = ProveedorSchema()
 insumo_schema = InsumoSchema()
+producto_schema = ProductoSchema()

@@ -19,8 +19,8 @@ class Usuario(db.Model):
         return None
 
     #def __init__(self, nombre, password,confirmacion):
-     #   self.nombre= nombre
-      #  self.password= password
+    #   self.nombre= nombre
+    #   self.password= password
 
 class Proveedor (db.Model):
 
@@ -41,6 +41,11 @@ class Insumo (db.Model):
     medidas_insumo = db.Column(db.String, nullable=True)
     marca_insumo = db.Column(db.String, nullable=True)
  
-
-
+class Producto (db.Model):
+    id_producto = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    nombre_producto = db.Column(db.String, nullable=False)
+    codigo_producto = db.Column(db.Integer, nullable=False)
+    color_producto = db.Column(db.String, nullable=True)
+    medidas_producto = db.Column(db.String, nullable=True)
+    marca_producto = db.Column(db.String, nullable=True)
 
